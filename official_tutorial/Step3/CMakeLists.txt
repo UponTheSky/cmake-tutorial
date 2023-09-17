@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.27)
 
 # set the project name and version
 project(Tutorial VERSION 1.0)
@@ -25,8 +25,7 @@ add_executable(Tutorial tutorial.cxx)
 
 # TODO 5: Link Tutorial to tutorial_compiler_flags
 
-target_link_libraries(Tutorial PUBLIC MathFunctions)
-target_link_libraries(Tutorial PRIVATE tutorial_compiler_flags)
+target_link_libraries(Tutorial PRIVATE tutorial_compiler_flags MathFunctions)
 
 # TODO 3: Remove use of EXTRA_INCLUDES
 
