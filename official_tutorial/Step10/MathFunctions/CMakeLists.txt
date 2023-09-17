@@ -32,6 +32,8 @@ endif()
 
 target_link_libraries(MathFunctions PUBLIC tutorial_compiler_flags)
 
+target_compile_definitions(MathFunctions PRIVATE "EXPORTING_MYMATH")
+
 # install libs
 set(installable_libs MathFunctions tutorial_compiler_flags)
 if(TARGET SqrtLibrary)
@@ -40,3 +42,4 @@ endif()
 install(TARGETS ${installable_libs} DESTINATION lib)
 # install include headers
 install(FILES MathFunctions.h DESTINATION include)
+
